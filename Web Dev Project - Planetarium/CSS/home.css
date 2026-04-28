@@ -1,0 +1,226 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body font */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: black;
+}
+
+/* video background styling */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* the overlay */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+/* navigation bar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+}
+/* logo styling */
+.logo {
+    position: absolute;
+    left: 40px;
+}
+
+.logo img {
+    height: 40px;
+}
+/* navigation links styling */
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00ff88;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+.hero {
+    margin-top: 80px;
+}
+
+/* slideshow styling*/
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.slide-content h2 {
+    font-size: 48px;
+    font-family: 'Inter', sans-serif;
+}
+
+.slide-content p {
+    max-width: 600px;
+}
+
+/* arows design */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: #00ff88;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+
+.arrow:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* about us section */
+.about {
+    padding: 60px;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+}
+
+/* planets and planet card */
+.planets {
+    padding: 80px 40px 60px;
+    text-align: center;
+}
+
+.planet-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.planet-card {
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.planet-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,136,0.6);
+}
+
+.planet-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+/* extra scaling for earth image to fit better */
+.earth-img {
+    transform: scale(0.8);
+}
+
+.planet-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* footer */
+.footer {
+    text-align: left;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.8);
+}
+
+/* fade in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

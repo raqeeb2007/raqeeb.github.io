@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Planetarium</title> <!-- website title-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> <!-- poppins google font-->
+    <link rel="stylesheet" href="CSS/home.css"> <!-- external css file-->
+</head>
+<body>
+
+    <!-- background video-->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="Assets/twinkle-stars.mp4" type="video/mp4"> 
+    </video>
+
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Assets/big planetarium.jpg" alt="Logo">
+        </div>
+
+        <ul class="nav-links"> <!-- navigation links-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html/earth.html">Earth</a></li>
+            <li><a href="html/mars.html">Mars</a></li>
+            <li><a href="#">Jupiter</a></li>
+        </ul>
+    </nav>
+
+    <!-- slideshow show with class hero-->
+    <header class="hero">
+        <div class="slideshow">
+
+            <div class="slide active">
+                <img src="Assets/solar-system3.jpg" alt="Solar System">
+                <div class="slide-content">
+                    <h2>Explore the Wonders of Space</h2>
+                    <p>Discover galaxies, nebulae, and cosmic mysteries beyond imagination.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Assets/black hole.jpg" alt="Black Hole">
+                <div class="slide-content">
+                    <h2>Black Holes</h2>
+                    <p>Regions of spacetime where gravity is so strong nothing can escape.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Assets/exoplanet3.jpg" alt="Exoplanet">
+                <div class="slide-content">
+                    <h2>Exoplanets</h2>
+                    <p>Planets orbiting stars beyond our solar system—some may host life.</p>
+                </div>
+            </div>
+
+            <button class="arrow left" aria-label="Previous Slide">&larr;</button>
+            <button class="arrow right" aria-label="Next Slide">&rarr;</button>
+
+        </div>
+    </header>
+
+    <!-- about us -->
+    <section class="about fade-in">
+        <h2>About Us</h2>
+        <p>
+            Big Planetarium is an educational platform focused on making astronomy
+            accessible, engaging, and exciting for everyone.
+        </p>
+    </section>
+
+    <!-- planets and planet cards -->
+    <section class="planets">
+        <h2 class="fade-in">Our Solar System (featured planets)</h2>
+
+        <div class="planet-grid">
+
+            <a href="html/earth.html" class="planet-link">
+                <div class="planet-card fade-in">
+                    <img src="Assets/earth 6.jpg" alt="Earth" class="earth-img">
+                    <h3>Earth</h3>
+                    <p>Our home planet filled with life and water.</p>
+                </div>
+            </a>
+
+            <div class="planet-card fade-in">
+                <img src="Assets/Mars.jpg" alt="Mars">
+                <h3>Mars</h3>
+                <p>The red neighbour and a possible home one day.</p>
+            </div>
+
+            <div class="planet-card fade-in">
+                <img src="Assets/jupiter.jpg" alt="Jupiter">
+                <h3>Jupiter</h3>
+                <p>The largest planet and Earth's guardian.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer-->
+    <footer class="footer">
+        <p>&copy; Big Planetarium</p>
+        <p>2026</p>
+    </footer>
+
+    <script src="JS/home.js"></script> <!-- external js file-->
+</body>
+</html>
