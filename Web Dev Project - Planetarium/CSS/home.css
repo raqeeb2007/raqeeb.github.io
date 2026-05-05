@@ -224,3 +224,33 @@ body::before {
     opacity: 1;
     transform: translateY(0);
 }
+/* progress bar */
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.2);
+    z-index: 10;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #00ff88;
+    transition: width 0.1s linear;
+}
+/* extra scaling for venus image to fit better */
+.venus-img {
+    transform: scale(0.8);
+}
+/* extra scaling for uranus image to fit better */
+.uranus-img {
+    transform: scale(0.8);
+}
+/* extra scaling for neptune image to fit better */
+.neptune-img {
+    transform: scale(0.8);
+}
+/*end of code, for now*/

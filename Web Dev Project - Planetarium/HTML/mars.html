@@ -1,0 +1,94 @@
+<!-- not finished  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars - Big Planetarium</title> <!-- title for mars page -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> <!-- poppins font from google-->
+    <link rel="stylesheet" href="../CSS/mars.css">
+</head>
+<body>
+
+    <!-- looping mars video -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="../Assets/man walking on mars.mp4" type="video/mp4">
+    </video>
+
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../Assets/big planetarium.jpg" alt="Logo">
+        </div>
+<!-- links for nav bar-->
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="earth.html">Earth</a></li>
+            <li><a href="mars.html">Mars</a></li>
+            <li><a href="jupiter.html">Jupiter</a></li>
+        </ul>
+    </nav>
+<!-- main content -->
+<header class="hero">
+    <div class="hero-content fade-in">
+        <div class="hero-left">
+            <h2>Mars</h2>
+            <p>The fourth planet from the Sun and the second-smallest planet in the Solar System.</p>
+        </div>
+
+        <div class="hero-right">
+            <div class="slideshow">
+                <img src="../Assets/mars ocean 2.jpg" class="slide active">
+                <img src="../Assets/mars volcano.jpg" class="slide">
+                <img src="../Assets/mars horizon.jpg" class="slide">
+                 <button class="slide-btn prev">&larr;</button>
+    <button class="slide-btn next">&rarr;</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <section class="about fade-in">
+        <h2>About Mars</h2>
+        <p>
+            Mars is the fourth planet from the Sun, known for being red due to iron oxide on its surface. It has a thin atmosphere and evidence of ancient river valleys and polar ice caps.
+            It has a thin atmosphere and evidence of ancient river valleys and polar ice caps.
+        </p>
+    </section>
+<!-- key facts using the same planet cards from homepage-->
+    <section class="planets">
+        <h2 class="fade-in">Key Facts</h2>
+
+        <div class="planet-grid">
+            <div class="planet-card fade-in"> <!-- using the same planet card design from homepage for consistency -->
+                <h3>similar Day/Night cycle to Earth</h3>
+                <p>A day on Mars is roughly 24 hours and 40 minutes, similar to Earth, allowing for human-friendly circadian rhythms</p>
+            </div>
+
+            <div class="planet-card fade-in">
+                <h3>largest volcano in our solar system</h3>
+                <p>Mars is home to Olympus Mons, the largest volcano in the solar system, which is about three times taller than Mount Everest.</p>
+            </div>
+
+            <div class="planet-card fade-in">
+                <h3>Mars used to be filled with water</h3>
+                <p> While it is a desert world today, Mars has vast amounts of water ice at its poles. </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; Big Planetarium</p>
+        <p>2026</p>
+    </footer>
+
+    <script src="../JS/mars.js"></script>  <!-- link to external js -->
+
+</body>
+</html>
+<!-- end of code hopefully -->

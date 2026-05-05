@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Planetarium</title> <!-- title of the website and the homepage -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> <!-- poppins font from google fonts-->
+    <link rel="stylesheet" href="Web Dev Project - Planetarium/CSS/home.css"> <!-- link to external css for homepage -->
+</head>
+<body>
+
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="Web Dev Project - Planetarium/Assets/twinkle-stars.mp4" type="video/mp4"> <!-- background video for homepage -->
+    </video>
+<!-- navigation bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Web Dev Project - Planetarium/Assets/big planetarium.jpg" alt="Logo">  <!-- logo for the big planetarium in header navbar -->
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Web Dev Project - Planetarium/HTML/earth.html">Earth</a></li>
+            <li><a href="Web Dev Project - Planetarium/HTML/mars.html">Mars</a></li>
+            <li><a href="Web Dev Project - Planetarium/HTML/jupiter.html">Jupiter</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="slideshow"><!-- slideshow  for homepage -->
+
+            <div class="slide active">
+                <img src="Web Dev Project - Planetarium/Assets/solar-system3.jpg" alt="Solar System">
+                <div class="slide-content">
+                    <h2>Explore the Wonders of Space</h2>
+                    <p>Discover galaxies, nebulae, and cosmic mysteries beyond imagination.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Web Dev Project - Planetarium/Assets/black hole.jpg" alt="Black Hole">
+                <div class="slide-content">
+                    <h2>Black Holes</h2>
+                    <p>Regions of spacetime where gravity is so strong nothing can escape.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Web Dev Project - Planetarium/Assets/exoplanet3.jpg" alt="Exoplanet">
+                <div class="slide-content">
+                    <h2>Exoplanets</h2>
+                    <p>Planets orbiting stars beyond our solar system—some may host life.</p>
+                </div>
+            </div>
+
+            <button class="arrow left" aria-label="Previous Slide">&larr;</button>
+            <button class="arrow right" aria-label="Next Slide">&rarr;</button>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="about fade-in"> <!-- about us section with animation -->
+        <h2>About Us</h2>
+        <p>
+            Big Planetarium is an educational platform focused on making astronomy
+            accessible, engaging, and exciting for everyone.
+        </p>
+    </section>
+
+<section class="planets">
+    <h2 class="fade-in">Our Solar System (Featured Planets)</h2>
+    <br>
+
+    <div class="planet-grid"> <!-- section for planets with cards and links to featured planets and non featured planets have only images -->
+
+        <a href="Web Dev Project - Planetarium/HTML/earth.html" class="planet-link">
+            <div class="planet-card fade-in">
+                <img src="Web Dev Project - Planetarium/Assets/earth 6.jpg" alt="Earth" class="earth-img">
+                <h3>Earth</h3>
+                <p>Our home planet filled with life and water.</p>
+            </div>
+        </a>
+
+        <a href="Web Dev Project - Planetarium/HTML/mars.html" class="planet-link">
+            <div class="planet-card fade-in">
+                <img src="Web Dev Project - Planetarium/Assets/Mars.jpg" alt="Mars">
+                <h3>Mars</h3>
+                <p>The red neighbour and a possible home one day.</p>
+            </div>
+        </a>
+
+        <a href="Web Dev Project - Planetarium/HTML/jupiter.html" class="planet-link">
+            <div class="planet-card fade-in">
+                <img src="Web Dev Project - Planetarium/Assets/jupiter.jpg" alt="Jupiter">
+                <h3>Jupiter</h3>
+                <p>The largest planet and Earth's guardian.</p>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+
+<section class="planets">
+    <h2 class="fade-in">Other Planets</h2>
+    <br>
+
+    <div class="planet-grid">
+
+        <div class="planet-card fade-in">
+            <img src="Web Dev Project - Planetarium/Assets/mercury 2.jpg" alt="Mercury">
+            <h3>Mercury</h3>
+            <p>The smallest planet and closest to the Sun.</p>
+        </div>
+
+        <div class="planet-card fade-in">
+            <img src="Web Dev Project - Planetarium/Assets/venus.jpg" alt="Venus" class="venus-img">
+            <h3>Venus</h3>
+            <p>A hot planet with a thick, toxic atmosphere.</p>
+        </div>
+
+        <div class="planet-card fade-in">
+            <img src="Web Dev Project - Planetarium/Assets/saturn.jpg" alt="Saturn">
+            <h3>Saturn</h3>
+            <p>Famous for its stunning ring system.</p>
+        </div>
+
+        <div class="planet-card fade-in">
+            <img src="Web Dev Project - Planetarium/Assets/uranus.jpg" alt="Uranus" class="uranus-img">
+            <h3>Uranus</h3>
+            <p>An ice giant that rotates on its side.</p>
+        </div>
+
+        <div class="planet-card fade-in">
+            <img src="Web Dev Project - Planetarium/Assets/neptune.jpg" alt="Neptune" class="neptune-img">
+            <h3>Neptune</h3>
+            <p>The farthest planet with powerful winds.</p>
+        </div>
+
+    </div>
+</section>
+<!-- footer -->
+    <footer class="footer">
+        <p>&copy; Big Planetarium</p>
+        <p>2026</p>
+    </footer>
+
+    <script src="Web Dev Project - Planetarium/JS/home.js"></script>  <!-- link to external js for homepage -->
+</body>
+</html>
+<!-- end of the code!!!! enjoy the website -->
