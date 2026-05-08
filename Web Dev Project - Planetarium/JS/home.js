@@ -65,3 +65,4 @@ setInterval(() => {
         nextBtn.click();
     }
 }, intervalTime);
+// end of code
