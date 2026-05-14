@@ -1,4 +1,4 @@
-// same as mars (reuse completely)
+// fade in animation
 const faders = document.querySelectorAll('.fade-in');
 
 const observer = new IntersectionObserver(entries => {
@@ -10,13 +10,20 @@ const observer = new IntersectionObserver(entries => {
 
 faders.forEach(el => observer.observe(el));
 
+
+// navigation bar scroll effect 
 window.addEventListener("scroll", () => {
     const nav = document.querySelector(".navbar");
-    nav.style.background = window.scrollY > 50
-        ? "rgba(0,0,0,0.9)"
-        : "rgba(0,0,0,0.7)";
+
+    if (window.scrollY > 50) {
+        nav.style.background = "rgba(0,0,0,0.9)";
+    } else {
+        nav.style.background = "rgba(0,0,0,0.7)";
+    }
 });
 
+
+// slideshow 
 const slides = document.querySelectorAll(".slide");
 const progress = document.querySelector(".progress");
 const prevBtn = document.querySelector(".prev");
@@ -26,7 +33,7 @@ let index = 0;
 const duration = 4000;
 let interval;
 
-// show slide
+
 function showSlide(i) {
     slides.forEach(s => s.classList.remove("active"));
     slides[i].classList.add("active");
@@ -43,7 +50,7 @@ function startProgress() {
     }, 50);
 }
 
-// next / prev logic
+// forward and backward
 function nextSlide() {
     index = (index + 1) % slides.length;
     showSlide(index);
@@ -62,7 +69,7 @@ function resetInterval() {
     interval = setInterval(nextSlide, duration);
 }
 
-// button events
+
 nextBtn.addEventListener("click", () => {
     nextSlide();
     resetInterval();
@@ -73,7 +80,7 @@ prevBtn.addEventListener("click", () => {
     resetInterval();
 });
 
-// init
+
 showSlide(index);
 startProgress();
 interval = setInterval(nextSlide, duration);

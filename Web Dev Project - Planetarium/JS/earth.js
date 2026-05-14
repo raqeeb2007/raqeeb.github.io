@@ -23,7 +23,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-// slideshow logic
+// slideshow 
 const slides = document.querySelectorAll(".slide");
 const progress = document.querySelector(".progress");
 const prevBtn = document.querySelector(".prev");
@@ -33,7 +33,7 @@ let index = 0;
 const duration = 4000;
 let interval;
 
-// show slide
+
 function showSlide(i) {
     slides.forEach(s => s.classList.remove("active"));
     slides[i].classList.add("active");
@@ -50,7 +50,7 @@ function startProgress() {
     }, 50);
 }
 
-// next / prev logic
+// forward and backward
 function nextSlide() {
     index = (index + 1) % slides.length;
     showSlide(index);
@@ -69,7 +69,7 @@ function resetInterval() {
     interval = setInterval(nextSlide, duration);
 }
 
-// button events
+
 nextBtn.addEventListener("click", () => {
     nextSlide();
     resetInterval();
@@ -80,7 +80,7 @@ prevBtn.addEventListener("click", () => {
     resetInterval();
 });
 
-// init
+
 showSlide(index);
 startProgress();
 interval = setInterval(nextSlide, duration);
